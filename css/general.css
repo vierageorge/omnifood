@@ -29,11 +29,14 @@ Paragraph: 1.6
 #fae5d3
 - Shades #cf711f
 - Accent: 
-- Grays: 
+- Grays:
+#888 
+#767676: lightest gray on #fdf2e9
+#6f6f6f: lightest gray on #fff
 #555 
 #333 
-#888 
-Lightest grays: #6f6f6f
+
+
 
 05 -- SHADOWS
 
@@ -109,6 +112,10 @@ strong {
 
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .heading-primary,
