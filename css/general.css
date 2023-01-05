@@ -29,7 +29,7 @@ Paragraph: 1.6
 #fae5d3
 - Shades #cf711f
 - Accent: 
-- Greys: #555 #333
+- Greys: #555 #333 #888
 
 05 -- SHADOWS
 
@@ -61,7 +61,6 @@ body {
   color: #555;
 }
 
-
 /*******************************/
 /* GENERAL REUSABLE COMPONENTS */
 /*******************************/
@@ -75,7 +74,7 @@ body {
 .grid {
   display: grid;
   column-gap: 6.4rem;
-  row-gap: 9.6rem; 
+  row-gap: 9.6rem;
 }
 
 .grid--center-v {
