@@ -1,14 +1,39 @@
 // Set current year
-const yearEl =  document.querySelector('.year');
+const yearEl = document.querySelector(".year");
 yearEl.textContent = new Date().getFullYear();
 
 // Add Mobile Menu Behavior
-const btnNavEl = document.querySelector('.btn-mobile-nav');
-const headerEl = document.querySelector('.header');
-btnNavEl.addEventListener('click', () => {
-  headerEl.classList.toggle('nav-open')
-})
+const btnNavEl = document.querySelector(".btn-mobile-nav");
+const headerEl = document.querySelector(".header");
+btnNavEl.addEventListener("click", () => {
+  headerEl.classList.toggle("nav-open");
+});
 
+// Smooth scrolling animation
+const allLinksEL = document.querySelectorAll("a:link");
+allLinksEL.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const href = link.getAttribute("href");
+    
+    //Scroll back to top
+    if (href === "#") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+    //Scroll to other links
+    if (href !== "#" && href.startsWith('#')){
+      const targetEl = document.querySelector(href);
+      targetEl.scrollIntoView({behavior: "smooth"});
+    }
+    //Remove Mobile Nav.
+    if(link.classList.contains('main-nav-link')) {
+      headerEl.classList.remove("nav-open");
+    }
+  });
+});
 
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions

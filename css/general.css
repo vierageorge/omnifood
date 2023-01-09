@@ -66,6 +66,8 @@ Default: 9px
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  /* Only works in most recent versions of Safari */
+  /* scroll-behavior: smooth; */
 }
 
 body {
